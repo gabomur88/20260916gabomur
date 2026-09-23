@@ -13,6 +13,11 @@ jobs:
   compilacioncita:
     runs-on: ubuntu-latest
 
+    env:
+      NOMBRE_USR: ${{ vars.NOMBRE_USR }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+
+
     steps:
       - name: Checkout
         uses: actions/checkout@v6.1.0
